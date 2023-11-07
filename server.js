@@ -15,16 +15,6 @@ require("dotenv").config();
 
 app.use(
   "/graphql",
-  jwt({
-    secret: process.env.JWT_SECRET,
-    algorithms: ["HS256"], // Algorithm used to sign the token
-  }).unless({
-    path: ["/graphql", "/contact", "/sign_up"], // Add routes that don't require authentication
-  })
-);
-
-app.use(
-  "/graphql",
   graphqlHTTP({
     schema,
     graphiql: true,
