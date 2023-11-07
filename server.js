@@ -12,9 +12,10 @@ const port = 8080;
 
 app.use(
   cors({
-    origin: "https://contact-list-6.vercel.app",
+    origin: "*",
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 require("dotenv").config();
