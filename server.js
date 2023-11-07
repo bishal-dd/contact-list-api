@@ -25,6 +25,9 @@ const server = new ApolloServer({
   context: ({ req }) => {
     // You can add context data here if needed
   },
+  cors: {
+    origin: "*",
+  },
 });
 
 async function startServer() {
