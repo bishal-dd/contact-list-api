@@ -13,7 +13,6 @@ const createUser = {
   },
   async resolve(parent, args) {
     const hashedPassword = await bcrypt.hash(args.password, 10); // 10 is the number of salt rounds
-
     User.create({
       user_name: args.user_name,
       email: args.email,

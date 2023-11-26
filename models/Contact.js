@@ -4,6 +4,11 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   const Contact = sequelize.define("Contact", {
+    id: {
+      type: DataTypes.UUID, // or any other type that suits your needs
+      primaryKey: true,
+      allowNull: false,
+    },
     contact_name: {
       type: DataTypes.STRING,
       allowNull: false,

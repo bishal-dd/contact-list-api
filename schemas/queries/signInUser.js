@@ -22,7 +22,7 @@ const signInUser = {
       if (isPasswordValid) {
         // Generate a JWT token
         const token = jwt.sign(
-          { userId: user.id, email: args.email },
+          { id: user.id, email: user.email, user_name: user.user_name },
           process.env.JWT_SECRET
         );
         return token;

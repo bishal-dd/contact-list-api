@@ -14,7 +14,7 @@ const ContactType = new GraphQLObjectType({
     contact_name: { type: GraphQLString },
     contact_number: { type: GraphQLInt },
     contact_email: { type: GraphQLString },
-    userId: { type: GraphQLInt }, // This is the foreign key
+    userId: { type: GraphQLID }, // This is the foreign key
     isActive: { type: GraphQLBoolean }, // New boolean field
   }),
 });
