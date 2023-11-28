@@ -9,7 +9,7 @@ const createContact = {
     contact_name: { type: GraphQLString },
     contact_email: { type: GraphQLString },
     contact_number: { type: GraphQLInt },
-    userId: { type: GraphQLInt },
+    userId: { type: GraphQLID },
   },
   async resolve(parent, args) {
     Contact.create({
